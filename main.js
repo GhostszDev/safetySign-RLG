@@ -40,7 +40,7 @@ $(document).ready(function() {
         let newdate = new Date($('.adminDatePicker')[0].value).toJSON();
         let dateJson = { date: newdate };
 
-
+        console.log(dateJson);
     }
 
     if($('.daysCounter').length > 0){

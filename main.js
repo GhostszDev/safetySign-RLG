@@ -12,21 +12,28 @@ $(document).ready(function() {
     };
 
 
-    function getDateFromFile() {
-        fetch(fetchURI, {
-            method: "GET",
-            headers: {
-                "access-control-allow-origin:": "*",
-                Accept: "application/json",
-                "Content-Type": "application/json",
+    async function getDateFromFile() {
+        try{
+            const response = await fetch(fetchURI);
+
+            if(!response.ok){
+                throw new Error(`Response status: ${response.status}`);
             }
-        })
-            .then(response => response.json())
-            .then(json => {
-                date = new Date(json.date);
-                counter = Math.round(Math.abs((date - today) / oneDay));
-                $('.daysCounter').append(counter);
-            });
+            
+                // .then(response => response.json())
+                // .then(json => {
+                //     date = new Date(json.date);
+                //     counter = Math.round(Math.abs((date - today) / oneDay));
+                //     $('.daysCounter').append(counter);
+                // });
+            const json = await response.json();
+            console.log(json);
+            date = new Date(json.date);
+            counter = Math.round(Math.abs((date - today) / oneDay));
+             $('.daysCounter').append(counter);
+          } catch (error) {
+            console.error(error.message);
+          }
     }
 
     async function saveDateToFile() {

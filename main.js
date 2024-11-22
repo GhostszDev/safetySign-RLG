@@ -5,10 +5,22 @@ $(document).ready(function() {
     let today = new Date();
     let counter = 0;
     const fetchURI = 'https://rld-safety-sign-2e3e5dd3d14c.herokuapp.com/dataManager';
+    const headers = {
+        "access-control-allow-origin:": "*",
+        Accept: "application/json",
+        "Content-Type": "application/json",
+    };
 
 
     function getDateFromFile() {
-        fetch(fetchURI)
+        fetch(fetchURI, {
+            method: "GET",
+            headers: {
+                "access-control-allow-origin:": "*",
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
             .then(response => response.json())
             .then(json => {
                 date = new Date(json.date);

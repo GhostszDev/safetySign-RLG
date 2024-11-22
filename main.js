@@ -4,7 +4,7 @@ $(document).ready(function() {
     let date = new Date();
     let today = new Date();
     let counter = 0;
-    const fetchURI = 'https://rld-safety-sign-2e3e5dd3d14c.herokuapp.com/dataManager';
+    const fetchURI = 'https://rlg-safetysign.onrender.com/datamanager';
     const headers = {
         "access-control-allow-origin:": "*",
         Accept: "application/json",

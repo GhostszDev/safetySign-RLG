@@ -14,14 +14,7 @@ $(document).ready(function() {
 
     async function getDateFromFile() {
         try{
-            const response = await fetch(fetchURI, {}, {
-                method: "GET",
-                headers: {
-                    "access-control-allow-origin:": "*",
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                }
-            });
+            const response = await fetch(fetchURI);
 
             if(!response.ok){
                 throw new Error(`Response status: ${response.status}`);

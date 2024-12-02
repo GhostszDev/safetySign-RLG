@@ -40,7 +40,21 @@ $(document).ready(function() {
         let newdate = new Date($('.adminDatePicker')[0].value).toJSON();
         let dateJson = { date: newdate };
 
-        console.log(dateJson);
+        try{
+            const response = await fetch(fetchURI, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify(dateJSON)
+            });
+
+             if(!response.ok){
+                throw new Error(`Response status: ${response.status}`);
+            }
+        } catch (error) {
+            console.error(error.message);
+        }
+
+        console.log(response.json);
     }
 
     if($('.daysCounter').length > 0){

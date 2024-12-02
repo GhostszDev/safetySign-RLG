@@ -39,7 +39,7 @@ $(document).ready(function() {
     async function saveDateToFile() {
         let newdate = new Date($('.adminDatePicker')[0].value).toJSON();
 
-        let response = $.post(fetchURI, JSON.stringify({date: newdate}));
+        let response = $.post(fetchURI, {date: newdate});
 
         console.log(response);
 

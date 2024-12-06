@@ -15,6 +15,11 @@ body{
   width: 50vw;
   align-content: center;
   text-align: center;
+  padding: 2rem;
+}
+
+.sign{
+  font-size: 3em;
 }
 
 .adminDatePicker{
@@ -44,11 +49,33 @@ ul p{
 }
 
 .daysCounter{
-  height: 3rem;
+  height: 5rem;
+  width: 12rem;
   background:white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   font-weight: bolder;
+  margin-right: 1.5rem;
+  color: black;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+.sign-green{
+  background: #016d54;
+  color: white;
+  display: block;
+  padding: 1rem;
+}
+
+.sign-black{
+  background: black;
+  color: white;
+  display: block;
+  padding: 1rem;
 }

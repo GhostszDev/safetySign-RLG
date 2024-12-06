@@ -11,8 +11,8 @@ body{
 .admin-container, .sign{
   background: #dfe1e1;
   border-radius: 25px;
-  height: 50vh;
-  width: 50vw;
+  min-height: 50vh;
+  min-width: 50vw;
   align-content: center;
   text-align: center;
   padding: 2rem;

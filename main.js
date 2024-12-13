@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
     let date = new Date();
-    let today = new Date();
+    let today = new Date.now();
     let counter = 0;
     const fetchURI = 'https://rlg-safetysign.onrender.com/datamanager';
     const headers = {
@@ -29,7 +29,7 @@ $(document).ready(function() {
             const json = await response.json();
             console.log(json);
             date = new Date(json.date);
-            counter = Math.round(Math.abs((date - today.now()) / oneDay));
+            counter = Math.round(Math.abs((date - today) / oneDay));
              $('.daysCounter').append(counter);
           } catch (error) {
             console.error(error.message);

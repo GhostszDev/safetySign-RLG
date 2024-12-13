@@ -29,7 +29,7 @@ $(document).ready(function() {
             const json = await response.json();
             console.log(json);
             date = new Date(json.date);
-            consoel.log(today);
+            console.log(today);
             counter = Math.round(Math.abs((date - today) / oneDay));
              $('.daysCounter').append(counter);
           } catch (error) {

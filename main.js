@@ -38,7 +38,8 @@ $(document).ready(function() {
     }
 
     async function saveDateToFile() {
-        let newdate = new Date($('.adminDatePicker')[0].value).toJSON();
+        let newdate = new Date($('.adminDatePicker')[0].value).setHours(23, 59, 59, 999).toJSON();
+        console.log(newdate);
 
         let response = $.post(fetchURI, {date: newdate});
 

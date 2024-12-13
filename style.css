@@ -21,7 +21,12 @@ body{
 }
 
 .sign{
-  font-size: 3em;
+  width: 546px !important;
+  height: 390px !important;
+}
+
+.sign{
+  font-size: 2em;
 }
 
 .adminDatePicker{
@@ -51,8 +56,8 @@ ul p{
 }
 
 .daysCounter{
-  height: 5rem;
-  width: 12rem;
+  height: 4rem;
+  width: 10rem;
   background:white;
   display: flex;
   align-items: center;

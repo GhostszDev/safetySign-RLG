@@ -23,6 +23,8 @@ body{
 .sign{
   width: 546px !important;
   height: 390px !important;
+  min-width: unset;
+  min-height: unset;
 }
 
 .sign{

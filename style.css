@@ -25,6 +25,7 @@ body{
   height: 390px !important;
   min-width: unset;
   min-height: unset;
+  border-radius: unset;
 }
 
 .sign{

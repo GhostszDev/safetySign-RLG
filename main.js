@@ -30,7 +30,7 @@ $(document).ready(function() {
             date = new Date(json.date);
 
             date.setHours(23);
-            today.setHours(23);
+            // today.setHours(23);
 
             console.log(date.toString());
             console.log(today.toString());

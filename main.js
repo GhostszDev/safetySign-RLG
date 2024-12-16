@@ -29,7 +29,7 @@ $(document).ready(function() {
             const json = await response.json();
             date = new Date(json.date);
 
-            date.setHours(23);
+            date.setHours(8);
             // today.setHours(23);
 
             console.log(date.toString());

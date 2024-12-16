@@ -32,7 +32,8 @@ $(document).ready(function() {
             date.setHours(23);
             today.setHours(23);
 
-
+            console.log(date.toString());
+            console.log(today.toString());
 
             counter = Math.round(Math.abs((date - today) / oneDay));
              $('.daysCounter').append(counter);

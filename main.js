@@ -27,9 +27,13 @@ $(document).ready(function() {
                 //     $('.daysCounter').append(counter);
                 // });
             const json = await response.json();
-            console.log(json);
             date = new Date(json.date);
-            console.log(today);
+
+            date.setHours(23);
+            today.setHours(23);
+
+
+
             counter = Math.round(Math.abs((date - today) / oneDay));
              $('.daysCounter').append(counter);
           } catch (error) {

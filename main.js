@@ -4,7 +4,7 @@ $(document).ready(function() {
     let date = new Date();
     let today = new Date();
     let counter = 0;
-    const fetchURI = 'https://rlg-backend.netlify.app/datamanager';
+    const fetchURI = 'https://rlg-safetysign.onrender.com/datamanager';
     const headers = {
         "access-control-allow-origin:": "*",
         Accept: "application/json",
